@@ -22,6 +22,7 @@
     <!-- 在项目加载的时候Spring会扫描这个包 ： Spring使用了扫描机制 -->
     <mvc:annotation-driven/>
     <context:component-scan base-package="com.controller"/>
+    <context:component-scan base-package="com.service"/>
 
     <!-- view -->
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">

@@ -5,6 +5,7 @@ package com.entity;
  */
 public class Product {
 
+    private Long id ;
     private String name ;
     private String description ;
     private float price ;
@@ -13,6 +14,21 @@ public class Product {
     }
 
     public Product(String name, String description, float price) {
+        this.name = name;
+        this.description = description;
+        this.price = price;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Product(Long id, String name, String description, float price) {
+        this.id = id;
         this.name = name;
         this.description = description;
         this.price = price;
