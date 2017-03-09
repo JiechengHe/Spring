@@ -8,6 +8,7 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -56,5 +57,11 @@ public class ProductController {
         model.addAttribute("product" , product) ;
         return "ProductView" ;
     }
+
+    /**
+     * 还有一个@ModelAttribute注解
+     * 如果注解在请求函数的中，注解一个参数时，则在调用该请求的时候，系统自动会将注解的参数加入到Model中，注解中如果加了key值则以该key值获取，如果没有则以类名
+     * 如果注解在方法中，则在该控制器的所有请求启动前，均会先调用@ModelAttribute注解的方法，并将返回对象加入到Model中
+     */
 
 }
